@@ -1,37 +1,30 @@
 name: "Release"
-on:
-  workflow_call:
-    inputs:
-      release_tag:
-        type: string
-        description: "Optional: Specify a release tag to use instead of the latest"
-        default: ''
-        required: false
-      loglevel:
-        type: string
-        description: "Optional: Specify the log level"
-        default: 'INFO'
-        required: false
-      devhub_alias:
-        type: string
-        description: "Specify the devhub alias"
-        default: 'devhub'
-        required: true
-      target_org_alias:
-        type: string
-        description: "Specify the target org alias"
-        default: ''
-        required: true
-      releaseNamePrefix:
-        type: string
-        description: "Specify the release name prefix"
-        default: 'sf'
-        required: true
-      auth_token:
-        type: string
-        description: "Authentication token"
-        default: ''
-        required: true
+description: "Release a package to a target org"
+inputs:
+  release_tag:
+    description: "Optional: Specify a release tag to use instead of the latest"
+    default: ''
+    required: false
+  loglevel:
+    description: "Optional: Specify the log level"
+    default: 'INFO'
+    required: false
+  devhub_alias:
+    description: "Specify the devhub alias"
+    default: 'devhub'
+    required: true
+  target_org_alias:
+    description: "Specify the target org alias"
+    default: ''
+    required: true
+  releaseNamePrefix:
+    description: "Specify the release name prefix"
+    default: 'sf'
+    required: true
+  auth_token:
+    description: "Authentication token"
+    default: ''
+    required: true
 runs:
   using: "composite"
   steps:
