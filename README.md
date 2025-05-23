@@ -47,7 +47,12 @@ permissions:
         # Specify the release name prefix
         # Required: true
         # Default: 'sf'
-        releaseNamePrefix:
+        releaseNamePrefix: ''
+
+        # Specify the auth token (ex. GITHUB_TOKEN)
+        # Required: true
+        # Default: ''
+        auth_token: ''
 ```
 <!-- end usage -->
 
