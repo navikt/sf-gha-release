@@ -51,7 +51,7 @@ runs:
 
         latest_tag=$(echo "$latest_tag" | tr -d '\n')
 
-        if [[ ! "$latest_tag" =~ ^$RELEASE_NAME_PREFIX[0-9]{13,14}$ ]]; then
+        if [[ ! "$latest_tag" =~ ^${RELEASE_NAME_PREFIX}[0-9]{13,14}$ ]]; then
           echo "::error::Invalid release name format: $latest_tag. Expected format: $RELEASE_NAME_PREFIX<timestamp>"
           exit 1
         fi
